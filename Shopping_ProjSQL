@@ -1,0 +1,118 @@
+create table Users(
+userID int primary key not null,
+username varchar(50), 
+phonenumber varchar(50),
+);
+
+
+CREATE TABLE Buyer1
+(
+    buyerid INT NOT NULL,
+	PRIMARY KEY(buyerid),
+	FOREIGN KEY(buyerid) REFERENCES Users(userid)
+);
+
+create table Seller(
+sellerID int primary key not null,
+userID int foreign key references Users(userID),
+);
+
+create table BankCard(
+card_number varchar(50) not null primary key,
+expirydate date,
+bank_name varchar(50),
+);
+
+create table CreditCard(
+card_number int not null primary key,
+userID int foreign key references Users(userID),
+Service_provider varchar(50),
+Ccard_number varchar(50) foreign key references BankCard(card_number),
+);
+
+create table DebitCard(
+Dcardnumber varchar(50) foreign key references bankcard(card_number),
+userID int foreign key references Users(userID),
+);
+
+alter table Users
+add address_users varchar(100);
+--select * from Users
+
+create table Store_Name(
+storeID int not null primary key,
+store_name varchar(50),
+store_add varchar(100),
+customergarde int,
+starttime time,
+
+);
+
+create table Brand (
+
+brandname varchar(50) not null primary key,
+
+);
+
+create table Product(
+productID int not null primary key,
+pro_brand_name varchar(50) foreign key references Brand(brandname),
+pro_name varchar(50),
+pro_type varchar(50),
+model_num varchar(50),
+color varchar(50),
+price int,
+amount int,
+pro_storeID int foreign key REFERENCES Store_Name(storeID),
+);
+
+create table OrderItems(
+itemID int not null primary key,
+prodID int not null foreign key references Product(productID),
+price int,
+order_date date,
+
+
+
+);
+
+create table Orders(
+
+order_num INT NOT NULL primary key,
+paymentState VARCHAR(50),
+order_Time DATE,
+payment INT,
+);
+CREATE TABLE ServicePoint(
+
+ser_pointID INT NOT NULL primary key,
+streetaddr VARCHAR(50),
+startTime VARCHAR(50),
+endTime VARCHAR(50),
+   
+);
+select *  from Orders
+
+CREATE TABLE Save_to_Shopping_Cart
+(
+userid INT NOT NULL  FOREIGN KEY(userid) REFERENCES Buyer1(buyerid),
+proID INT NOT NULL FOREIGN KEY REFERENCES Product(productID),
+addTime DATE,
+quantity INT,
+);
+
+
+CREATE TABLE Payment
+(
+orderNumber INT NOT NULL foreign key references Orders(order_num),
+creditcardNumber int NULL foreign key references Creditcard(card_number),
+payment_date DATE,
+
+);
+
+CREATE TABLE Deliver_To
+(
+user_address varchar(50),
+orderNum INT NOT NULL foreign key references Orders(order_num),
+delivary_time DATE
+);
