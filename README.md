@@ -11,7 +11,7 @@
 
 🔍 My projects focus on finding patterns in complex data, building clean data pipelines, and communicating insights in a clear and accessible way for both technical and non-technical audiences.
 
-🛠️ **Skills:** Python (pandas, matplotlib, seaborn, scikit-learn) · SQL (T-SQL, MySQL) · Power BI · Data Cleaning · EDA · API Integration · Web Scraping
+🛠️ **Skills:** Python (pandas, matplotlib, seaborn, scikit-learn) · SQL · Power BI · Data Cleaning · EDA · API Integration 
 
 📍 Based in Germany | Open to **Junior Data Analyst** and **Data Science Trainee** roles
 
@@ -27,7 +27,7 @@
 
 🔍 Meine Projekte konzentrieren sich auf die Erkennung von Mustern in komplexen Daten, den Aufbau sauberer Datenpipelines und die verständliche Kommunikation von Erkenntnissen — sowohl für technische als auch nicht-technische Zielgruppen.
 
-🛠️ **Kenntnisse:** Python (pandas, matplotlib, seaborn, scikit-learn) · SQL (T-SQL, MySQL) · Power BI · Datenbereinigung · EDA · API-Integration · Web Scraping
+🛠️ **Kenntnisse:** Python (pandas, matplotlib, seaborn, scikit-learn) · SQL· Power BI · Datenbereinigung · EDA · API-Integration
 
 📍 Wohnhaft in Deutschland | Offen für **Junior Data Analyst** und **Data Science Trainee** Stellen
 
